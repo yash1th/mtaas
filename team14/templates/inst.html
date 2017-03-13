@@ -1,0 +1,30 @@
+
+<div class="container">   
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>IP Address</th>
+        <th>Region</th>
+	<th></th>
+  <th></th>
+
+        
+	
+      </tr>
+    </thead>
+    <tbody>
+      {%for i in stats%}
+      <tr>
+        <td class="ins_id">{{i.id}}</td>
+        <td class="ins_ip">{{i.ip}}</td>
+        <td>us-east-1b</td>
+	<td><input type="button" value="Terminate" class="terminate"></td>
+  <td><input type="button" value="view" class="view"></td>       
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+

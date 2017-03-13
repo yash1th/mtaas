@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container"> 
+<ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>                    
+                    <li class="active">Instances</li>
+                </ul>    
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>IP Address</th>
+        <th>Region</th>
+	<th>Terminate</th>
+	
+      </tr>
+    </thead>
+    <tbody>
+      {%for i in stats%}
+      <tr>
+        <td>{{i.0}}</td>
+        <td>{{i.1}}</td>
+        <td>{{i.2}}</td>
+	<td><input type="button" value="Terminate" id="terminate"></td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
